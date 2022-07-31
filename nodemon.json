@@ -1,0 +1,8 @@
+{
+    "env": {
+        "DB_USER": "hoangviet",
+        "DB_PASSWORD": "juVCyhJ4kbJIvdIY",
+        "DB_NAME":"mern-project",
+        "JWT_KEY":"vietnguyen"
+    }
+}
