@@ -12,8 +12,6 @@ const app = express();
 //Set up routing
 app.use(bodyParser.json());
 
-app.use("/uploads/images", express.static(path.join("uploads", "images")));
-
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
@@ -23,7 +21,7 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE");
   next();
 });
-
+app.use("/uploads/images", express.static(path.join("uploads", "images")));
 app.use("/api/places", placesRoutes); //places
 app.use("/api/users", usersRoutes); //users
 
