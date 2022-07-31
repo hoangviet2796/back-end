@@ -10,7 +10,7 @@ const HttpError = require("./models/http-error");
 const app = express();
 
 //Set up routing
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
